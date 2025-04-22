@@ -22,7 +22,19 @@ const moodIcons = [
 
 
 function App() {
-  const [selectedDateData, setSelectedDateData] = useState<null | object>(null);
+  interface SelectedDateData {
+    entries: {
+      mood: string;
+      note: string;
+      weather: {
+        city: string;
+        temp: number;
+      };
+      created_at: string;
+    }[];
+  }
+
+  const [selectedDateData, setSelectedDateData] = useState<SelectedDateData | null>(null);
 
   const handleDateSelect = (data: any) => {
     setSelectedDateData(data);

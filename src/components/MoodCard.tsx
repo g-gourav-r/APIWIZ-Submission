@@ -7,7 +7,7 @@ import { balloons } from "balloons-js";
 import { getWeather } from "@/lib/weather";
 import DateTime from "./DateTime"; // Import DateTime component
 
-const MoodCard = ({ selectedDate }: { selectedDate: string }) => {
+const MoodCard = () => {
   const [mood, setMood] = useState<string | null>(null);
   const [notes, setNotes] = useState<string>("");
   const [weather, setWeather] = useState<any>(null);
@@ -33,7 +33,7 @@ const MoodCard = ({ selectedDate }: { selectedDate: string }) => {
 
     setIsSaving(true);
     try {
-      await saveMoodEntry(mood, notes, weather, selectedDate);
+      await saveMoodEntry(mood, notes, weather);
       balloons(); // Show balloons animation on success
       alert("Mood saved successfully!");
     } catch (err) {
