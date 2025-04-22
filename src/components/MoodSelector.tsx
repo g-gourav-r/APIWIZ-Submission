@@ -15,7 +15,7 @@ const moodIcons = [
   { icon: <AnnoyedIcon />, mood: "Annoyed" },
   { icon: <FrownIcon />, mood: "Sad" },
   { icon: <MehIcon />, mood: "Neutral" },
-  { icon: <LaughIcon />, mood: "Content" }, // 👈 LaughIcon, but shown as 'Content'
+  { icon: <LaughIcon />, mood: "Content" },
   { icon: <SmileIcon />, mood: "Happy" },
 ];
 
