@@ -82,7 +82,7 @@ function App() {
     )}
   </div>
 ) : (
-  <div className="text-gray-500 p-4">Select a date to view mood entries.</div>
+  <div className="text-gray-500 p-4 pt-10 text-center">Select a date to view mood entries.</div>
 )}
 
         </PageLayout>
