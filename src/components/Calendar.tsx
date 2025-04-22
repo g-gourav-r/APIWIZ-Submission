@@ -68,7 +68,7 @@ const MoodCalendar = ({ onSelectDate }: Props) => {
           <h2 className="text-3xl font-extrabold mb-4 text-center text-blue-800 dark:text-white font-sans">
             Mood Calendar
           </h2>
-          <div className="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg backdrop-blur-md bg-opacity-60">
+          <div className="bg-white dark:text-black dark:bg-slate-700 rounded-lg p-4 shadow-lg backdrop-blur-md bg-opacity-60">
             <Calendar
               onClickDay={handleDateClick}
               value={selected}
