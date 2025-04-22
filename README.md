@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# Mood Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Mood Tracker App! This app allows users to track their daily moods, add personal notes, and view the weather for their location. The app is designed to help you keep a journal of your emotions and reflect on your day.
 
-Currently, two official plugins are available:
+### Key Features:
+- **Mood Tracker**: Select your mood for the day from a list of options like "Happy", "Neutral", or "Sad".
+- **Notes**: Add personal notes to describe your day or why you feel a certain way.
+- **Weather Info**: The app fetches the current weather data based on your location, providing insights like temperature, weather description, and city name.
+- **Calendar View**: You can select a specific date on the calendar to view past mood entries for that day.
+- **Add Mood Entry**: Easily add mood entries for the day, which are saved and displayed in your journal.
+- **Dynamic UI**: The app adjusts the theme based on your preferences (light/dark mode).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tech Stack:
+- **React**: For building the user interface and managing the app's state.
+- **Supabase**: A backend-as-a-service to store mood entries, notes, and weather data.
+- **React Calendar**: To display a calendar view and select dates.
+- **Weather API**: Fetches real-time weather data based on the user's location.
+- **Tailwind CSS**: For styling and building a responsive, beautiful UI.
 
-## Expanding the ESLint configuration
+### Why This Stack?
+- **React** makes building the app’s dynamic components fast and efficient.
+- **Supabase** provides a simple backend for storing and querying mood entries with ease.
+- **React Calendar** is a lightweight and easy-to-use calendar component that fits perfectly for selecting dates.
+- **Weather API** allows fetching up-to-date weather data for a richer user experience.
+- **Tailwind CSS** ensures the app is both aesthetically pleasing and responsive without writing much custom CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### How it Works:
+1. The user selects a mood for the day and can add notes about how they feel.
+2. Weather information is automatically fetched based on the user's location.
+3. Mood entries are saved to the Supabase database and displayed in the journal.
+4. Users can view previous entries by selecting dates on the calendar, and all relevant data will be shown.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Enjoy tracking your mood and reflecting on your days!
