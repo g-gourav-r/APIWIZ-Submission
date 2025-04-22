@@ -69,10 +69,10 @@ function App() {
                 {moodIcon && <span className="mr-3">{moodIcon}</span>}
                 <p className="text-lg font-semibold text-gray-800 dark:text-gray-100">{entry.mood}</p>
               </div>
-              <p><strong>Note:</strong> {entry.note}</p>
-              <p><strong>Weather:</strong> {entry.weather.city}</p>
-              <p><strong>Temperature:</strong> {entry.weather.temp}°C</p>
-              <p><strong>Created At:</strong> {new Date(entry.created_at).toLocaleString()}</p>
+              <p>✍️ {entry.note}</p>
+              <p>🌍 {entry.weather.city}</p>
+              <p>🌡️ {entry.weather.temp}°C</p>
+              <p>⏰ {new Date(entry.created_at).toLocaleString()}</p>
             </div>
           );
         })}
