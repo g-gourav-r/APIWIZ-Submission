@@ -29,5 +29,3 @@ Welcome to the Mood Tracker App! This app allows users to track their daily mood
 2. Weather information is automatically fetched based on the user's location.
 3. Mood entries are saved to the Supabase database and displayed in the journal.
 4. Users can view previous entries by selecting dates on the calendar, and all relevant data will be shown.
-
-Enjoy tracking your mood and reflecting on your days!
