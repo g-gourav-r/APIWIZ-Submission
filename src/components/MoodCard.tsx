@@ -5,6 +5,7 @@ import { saveMoodEntry } from "@/lib/db";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { balloons } from "balloons-js";
 import { getWeather } from "@/lib/weather";
+import DateTime from "./DateTime"; // Import DateTime component
 
 const MoodCard = ({ selectedDate }: { selectedDate: string }) => {
   const [mood, setMood] = useState<string | null>(null);
@@ -43,18 +44,25 @@ const MoodCard = ({ selectedDate }: { selectedDate: string }) => {
     }
   };
 
+  // Determine the background color based on the mood
+  const moodBackground =
+    mood === "Happy"
+      ? "bg-yellow-50 dark:bg-yellow-200/10"
+      : mood === "Sad"
+      ? "bg-blue-50 dark:bg-blue-200/10"
+      : mood === "Angry"
+      ? "bg-red-50 dark:bg-red-200/10"
+      : "bg-white dark:bg-slate-800";
+
   return (
     <div
       className={`p-6 sm:p-8 rounded-3xl shadow-2xl transition-colors duration-300 
-        ${mood === "Happy"
-          ? "bg-yellow-50 dark:bg-yellow-200/10"
-          : "bg-white dark:bg-slate-800"} 
-        max-w-2xl mx-auto`}
+        ${moodBackground} max-w-2xl mx-auto`}
     >
       {/* Top Bar: Date + Weather */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div className="text-xl font-bold text-green-800 dark:text-blue-100 tracking-wide">
-          {selectedDate}
+          <DateTime showDate={true} showTime={false} />
         </div>
 
         {weather && (

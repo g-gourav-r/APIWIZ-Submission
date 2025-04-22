@@ -63,19 +63,19 @@ const MoodCalendar = ({ onSelectDate }: Props) => {
 
   return (
     <div className="min-h-screen bg-green-50 dark:bg-slate-600 transition-colors duration-300">
-      <div className="flex justify-center items-center h-full">
-        <div className="bg-white dark:bg-blue-900 rounded-lg shadow-lg p-6 max-w-md w-full">
-          <h2 className="text-3xl font-extrabold mb-4 text-center text-blue-800 dark:text-blue-100 font-sans">
+      <div className="flex justify-center items-center h-full px-4">
+        <div className="bg-white dark:bg-slate-800 bg-opacity-70 rounded-lg shadow-lg p-6 max-w-full w-full md:w-2/3 backdrop-blur-md">
+          <h2 className="text-3xl font-extrabold mb-4 text-center text-blue-800 dark:text-white font-sans">
             Mood Calendar
           </h2>
-          <div className="bg-gradient-to-r from-teal-400 to-blue-500 dark:from-slate-700 dark:to-indigo-800 rounded-lg p-4 shadow-lg">
+          <div className="bg-white dark:bg-slate-700 rounded-lg p-4 shadow-lg backdrop-blur-md bg-opacity-60">
             <Calendar
               onClickDay={handleDateClick}
               value={selected}
               className="rounded-md p-2 w-full shadow-lg"
             />
           </div>
-          {loading && <p className="text-sm text-center mt-2 text-gray-500">Fetching mood...</p>}
+          {loading && <p className="text-sm text-center mt-2 text-gray-500 dark:text-gray-300">Fetching mood...</p>}
         </div>
       </div>
     </div>
